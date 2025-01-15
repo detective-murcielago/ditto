@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditto Dancing</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+
+        .ditto {
+            width: 150px;
+            height: 150px;
+            animation: dance 0.8s infinite alternate;
+        }
+
+        @keyframes dance {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff7eb3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff4a88;
+        }
+    </style>
+</head>
+<body>
+    <img class="ditto" src="assets/ditto.gif" alt="Ditto Dancing">
+    <audio id="music" loop>
+        <source src="assets/music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <button onclick="document.getElementById('music').play()">Reproducir Música</button>
+</body>
+</html>
